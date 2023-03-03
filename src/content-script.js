@@ -3,7 +3,7 @@ console.log("拡張機能を読み込みました")
 // スナックバー用のCSSを挿入
 // デザイン参考：https://dubdesign.net/javascript/settimeout-snackbar/
 let style = `<style>
-    #snackbarByChromeExtension {
+#snackbarByChromeExtension {
     visibility: hidden;
     min-width: 250px;
     background-color: #313131;
@@ -17,26 +17,25 @@ let style = `<style>
     bottom: 30px; 
     transform: translateX(-50%);
     box-shadow: 0 3px 9px rgb(0 0 0 / 25%);
-    }
+}
     
-    #snackbarByChromeExtension.show {
+#snackbarByChromeExtension.show {
     visibility: visible;
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
     animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    }
+}
     
-    @keyframes fadein {
+@keyframes fadein {
     from {bottom: 0; opacity: 0;}
     to {bottom: 30px; opacity: 1;}
-    }
+}
     
-    @keyframes fadeout {
+@keyframes fadeout {
     from {bottom: 30px; opacity: 1;}
     to {bottom: 0; opacity: 0;}
-    }
+}
 </style>
 `
-document.querySelector(`head`).insertAdjacentHTML('beforeend', style);
+// document.querySelector(`head`).insertAdjacentHTML('beforeend', style);
 
 // ページ読み込みと同時に関数を定義
 window.onload = function(){
