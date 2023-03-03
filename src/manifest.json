@@ -1,0 +1,12 @@
+{
+    "name": "TextCount",
+    "version": "1",
+    "manifest_version": 3,
+    "description": "右クリックで選択した文字の文字数を表示します",
+    "content_scripts": [
+        {
+        "matches": ["https://*/*"],
+        "js": ["content-script.js"]
+        }
+    ]
+}
